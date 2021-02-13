@@ -18,27 +18,94 @@
 
     <style>
       body {
-        background: green;
+        background: rgb(2, 2, 27);
+        border: 4px blanchedalmond;
       }
+
       .banner {
-        background: url("https://images.unsplash.com/photo-1612831197872-e4e4ca7f623f?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+        background: url("https://images.unsplash.com/photo-1549286633-b81cf3179c80?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=752&q=80");
         width: 100%;
         height: 300px;
       }
+
       .container {
         max-width: 800px;
+        border-right: 1px groove rgb(151, 151, 151);
+        border-left: 1px groove rgb(151, 151, 151);
+        padding: 0;
       }
       .profile img {
         width: 150px;
         height: 150px;
         position: absolute;
+        border-style: solid;
+        border-width: 4px;
+        border-color: rgb(2, 2, 27);
         top: 30%;
         left: 25%;
       }
 
       .description {
-        padding: 4rem;
+        padding: 3rem;
         padding-bottom: 2rem;
+      }
+
+      .description .name {
+        color: white;
+        margin-top: 1rem;
+      }
+
+      .description .bio {
+        color: white;
+      }
+
+      .description .bio-link {
+        color: white;
+      }
+
+      .description .socialmedia h5 {
+        color: rgb(139, 139, 139);
+        font-size: 15px;
+        margin-bottom: 18px;
+      }
+
+      .media img {
+        width: 64px;
+        height: 64px;
+      }
+
+      section .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+      }
+
+      #tabs {
+        color: #eee;
+      }
+
+      .border-content {
+        border-style: none;
+      }
+      #tabs h6.section-title {
+        color: #eee;
+      }
+
+      #tabs .nav-tabs .nav-item.show .nav-link,
+      .nav-tabs .nav-link.active {
+        color: rgb(151, 151, 151);
+        background-color: transparent;
+        border-color: transparent transparent #f3f3f3;
+        border-bottom: 4px solid !important;
+        font-weight: bold;
+      }
+      #tabs .nav-tabs .nav-link {
+        border: 1px groove transparent;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        border-bottom: 1px groove rgb(151, 151, 151);
+        color: #eee;
+        font-size: 15px;
       }
 
       /* Movile Version */
@@ -85,7 +152,7 @@
           />
         </div>
       </div>
-      <div class="description bg-primary">
+      <div class="description">
         <div class="name">
           <h3>Fiqry choerudin</h3>
         </div>
@@ -97,90 +164,155 @@
         </div>
         <div class="bio-link">
           <div class="row">
-            <div class="col">
+            <div class="col-3">
               <img
-                src="https://img.icons8.com/material/24/000000/map-marker--v1.png"
-              /><span class="ml-1">Bandung</span>
+                src="https://img.icons8.com/material-rounded/24/ffffff/place-marker.png"
+              /><span class="ml-2">Bandung</span>
             </div>
-            <div class="col">
+            <div class="col-5">
               <img
-                src="https://img.icons8.com/material/24/000000/map-marker--v1.png"
-              /><span class="ml-1">Bandung</span>
-            </div>
-            <div class="col-7">
-              <img
-                src="https://img.icons8.com/material/24/000000/map-marker--v1.png"
-              /><span class="ml-1">Bandung</span>
+                src="https://img.icons8.com/ios/24/ffffff/link--v1.png"
+              /><span class="ml-2">github.com/fiqryq</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              id="home-tab"
-              data-toggle="tab"
-              href="#home"
-              role="tab"
-              aria-controls="home"
-              aria-selected="true"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="profile-tab"
-              data-toggle="tab"
-              href="#profile"
-              role="tab"
-              aria-controls="profile"
-              aria-selected="false"
-              >Profile</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="contact-tab"
-              data-toggle="tab"
-              href="#contact"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="home"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-          >
-            SATU
+      <div class="tabmenu">
+        <section id="tabs">
+          <div class="container-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <nav>
+                  <div
+                    class="nav nav-tabs nav-fill"
+                    id="nav-tab"
+                    role="tablist"
+                  >
+                    <a
+                      class="nav-item nav-link active"
+                      id="nav-home-tab"
+                      data-toggle="tab"
+                      href="#nav-home"
+                      role="tab"
+                      aria-controls="nav-home"
+                      aria-selected="true"
+                      >Blog</a
+                    >
+                    <a
+                      class="nav-item nav-link"
+                      id="nav-profile-tab"
+                      data-toggle="tab"
+                      href="#nav-profile"
+                      role="tab"
+                      aria-controls="nav-profile"
+                      aria-selected="false"
+                      >Work</a
+                    >
+                    <a
+                      class="nav-item nav-link"
+                      id="nav-contact-tab"
+                      data-toggle="tab"
+                      href="#nav-contact"
+                      role="tab"
+                      aria-controls="nav-contact"
+                      aria-selected="false"
+                      >Contact</a
+                    >
+                    <a
+                      class="nav-item nav-link"
+                      id="nav-about-tab"
+                      data-toggle="tab"
+                      href="#nav-about"
+                      role="tab"
+                      aria-controls="nav-about"
+                      aria-selected="false"
+                      >About</a
+                    >
+                  </div>
+                </nav>
+                <div
+                  class="tab-content py-3 px-3 mx-5 px-sm-0"
+                  id="nav-tabContent"
+                >
+                  <div
+                    class="tab-pane fade show active"
+                    id="nav-home"
+                    role="tabpanel"
+                    aria-labelledby="nav-home-tab"
+                  >
+                    <div class="media">
+                      <img
+                        class="mr-3 rounded-circle"
+                        src="https://pbs.twimg.com/profile_images/1358627271972540416/LScwOWLZ_400x400.jpg"
+                        alt="Generic placeholder image"
+                      />
+                      <div class="media-body">
+                        <h5 class="mt-0">Media heading</h5>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
+                        metus scelerisque ante sollicitudin. Cras purus odio,
+                        vestibulum in vulputate at, tempus viverra turpis. Fusce
+                        condimentum nunc ac nisi vulputate fringilla. Donec
+                        lacinia congue felis in faucibus.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-profile"
+                    role="tabpanel"
+                    aria-labelledby="nav-profile-tab"
+                  >
+                    Et et consectetur ipsum labore excepteur est proident
+                    excepteur ad velit occaecat qui minim occaecat veniam.
+                    Fugiat veniam incididunt anim aliqua enim pariatur veniam
+                    sunt est aute sit dolor anim. Velit non irure adipisicing
+                    aliqua ullamco irure incididunt irure non esse consectetur
+                    nostrud minim non minim occaecat. Amet duis do nisi duis
+                    veniam non est eiusmod tempor incididunt tempor dolor ipsum
+                    in qui sit. Exercitation mollit sit culpa nisi culpa non
+                    adipisicing reprehenderit do dolore. Duis reprehenderit
+                    occaecat anim ullamco ad duis occaecat ex.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-contact"
+                    role="tabpanel"
+                    aria-labelledby="nav-contact-tab"
+                  >
+                    Et et consectetur ipsum labore excepteur est proident
+                    excepteur ad velit occaecat qui minim occaecat veniam.
+                    Fugiat veniam incididunt anim aliqua enim pariatur veniam
+                    sunt est aute sit dolor anim. Velit non irure adipisicing
+                    aliqua ullamco irure incididunt irure non esse consectetur
+                    nostrud minim non minim occaecat. Amet duis do nisi duis
+                    veniam non est eiusmod tempor incididunt tempor dolor ipsum
+                    in qui sit. Exercitation mollit sit culpa nisi culpa non
+                    adipisicing reprehenderit do dolore. Duis reprehenderit
+                    occaecat anim ullamco ad duis occaecat ex.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-about"
+                    role="tabpanel"
+                    aria-labelledby="nav-about-tab"
+                  >
+                    Et et consectetur ipsum labore excepteur est proident
+                    excepteur ad velit occaecat qui minim occaecat veniam.
+                    Fugiat veniam incididunt anim aliqua enim pariatur veniam
+                    sunt est aute sit dolor anim. Velit non irure adipisicing
+                    aliqua ullamco irure incididunt irure non esse consectetur
+                    nostrud minim non minim occaecat. Amet duis do nisi duis
+                    veniam non est eiusmod tempor incididunt tempor dolor ipsum
+                    in qui sit. Exercitation mollit sit culpa nisi culpa non
+                    adipisicing reprehenderit do dolore. Duis reprehenderit
+                    occaecat anim ullamco ad duis occaecat ex.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div
-            class="tab-pane fade"
-            id="profile"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-          >
-            DUA
-          </div>
-          <div
-            class="tab-pane fade"
-            id="contact"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-          >
-            TIGA
-          </div>
-        </div>
+        </section>
       </div>
     </div>
 
