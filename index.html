@@ -16,6 +16,10 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <style>
       body {
         background: #14171a;
@@ -73,9 +77,23 @@
       .media {
         border-bottom: 1px groove rgb(121, 121, 121);
       }
+
+      .media:hover {
+        background: rgba(212, 212, 212, 0.096);
+      }
+
       .media img {
         width: 64px;
         height: 64px;
+      }
+
+      a.div-blog-content {
+        text-decoration: none;
+      }
+
+      .share-btn:hover {
+        background: rgba(74, 255, 2, 0.144);
+        border-radius: 100px;
       }
 
       section .section-title {
@@ -91,6 +109,7 @@
       .border-content {
         border-style: none;
       }
+
       #tabs h6.section-title {
         color: #eee;
       }
@@ -112,10 +131,12 @@
         font-size: 15px;
       }
 
-      /* Movile Version */
+      /* Large devices (desktops, 992px and up) */
       @media (max-width: 991.98px) {
         .container {
           max-width: 100%;
+          border: none;
+          padding: 0;
         }
 
         .profile img {
@@ -137,7 +158,18 @@
         }
 
         .description .name {
-          padding-top: 25px;
+          padding-top: 55px;
+        }
+
+        .tab-content {
+          padding: 0;
+          margin: 0;
+        }
+
+        .media img {
+          width: 28px;
+          height: 28px;
+          margin-top: 8px;
         }
       }
     </style>
@@ -188,15 +220,13 @@
         </div>
         <div class="bio-link">
           <div class="row">
-            <div class="col-3">
-              <img
-                src="https://img.icons8.com/material-rounded/24/ffffff/place-marker.png"
-              /><span class="ml-2">Bandung</span>
+            <div class="col-2">
+              <i class="fas fa-map-marker-alt"></i
+              ><span class="ml-2">Bandung</span>
             </div>
-            <div class="col-5">
-              <img
-                src="https://img.icons8.com/ios/24/ffffff/link--v1.png"
-              /><span class="ml-2 text-primary">github.com/fiqryq</span>
+            <div class="col-10">
+              <i class="fas fa-link"></i
+              ><span class="ml-2 text-primary">github.com/fiqryq</span>
             </div>
           </div>
         </div>
@@ -257,44 +287,69 @@
                     >
                   </div>
                 </nav>
-                <div class="tab-content py-3 px-5 px-sm-0" id="nav-tabContent">
+                <div class="tab-content" id="nav-tabContent">
                   <div
                     class="tab-pane fade show active"
                     id="nav-home"
                     role="tabpanel"
                     aria-labelledby="nav-home-tab"
                   >
+                    <!-- Start Content -->
                     <div class="media px-4 mt-3">
                       <img
-                        class="mr-3 rounded-circle"
+                        class="mr-3 mt-4 rounded-circle"
                         src="https://pbs.twimg.com/profile_images/1358627271972540416/LScwOWLZ_400x400.jpg"
                         alt="Generic placeholder image"
                       />
-                      <div class="media-body mb-4 mt-2">
-                        <h5 class="mt-0">Media heading</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                      </div>
+                      <a href="#" class="text-white div-blog-content">
+                        <div class="media-body mb-4 mt-4">
+                          <h5 class="mt-0">Media heading</h5>
+                          <p>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla
+                            vel metus scelerisque ante sollicitudin. Cras purus
+                            odio, vestibulum in vulputate at, tempus viverra
+                            turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec lacinia congue felis in faucibus.
+                          </p>
+                          <div class="row action-post">
+                            <div class="col-auto">
+                              <a href="#" class="text-secondary">
+                                <i class="fas fa-external-link-alt fa-lg"></i
+                              ></a>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                     </div>
-
+                    <!-- End Content -->
+                    <!-- Start Content -->
                     <div class="media px-4 mt-3">
                       <img
-                        class="mr-3 rounded-circle"
+                        class="mr-3 mt-4 rounded-circle"
                         src="https://pbs.twimg.com/profile_images/1358627271972540416/LScwOWLZ_400x400.jpg"
                         alt="Generic placeholder image"
                       />
-                      <div class="media-body mb-4 mt-2">
-                        <h5 class="mt-0">Media heading</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                      </div>
+                      <a href="#" class="text-white div-blog-content">
+                        <div class="media-body mb-4 mt-4">
+                          <h5 class="mt-0">Media heading</h5>
+                          <p>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla
+                            vel metus scelerisque ante sollicitudin. Cras purus
+                            odio, vestibulum in vulputate at, tempus viverra
+                            turpis. Fusce condimentum nunc ac nisi vulputate
+                            fringilla. Donec lacinia congue felis in faucibus.
+                          </p>
+                          <div class="row action-post">
+                            <div class="col-auto">
+                              <a href="#" class="text-secondary">
+                                <i class="fas fa-external-link-alt fa-lg"></i
+                              ></a>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                     </div>
+                    <!-- End Content -->
                   </div>
 
                   <div
